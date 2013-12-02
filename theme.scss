@@ -1,15 +1,30 @@
 
 /**
- * Base Colours website and theme helpers for the objects 
+ *  Fred's theme 
  * -----------------------------------------------------------------------------
+ *  This template holds theme patters for a couple of Fred's objects (These are outlined below) 
+ *  As this template will vary with every project it is just intended to be included once at 
+ * the start of your project and then you can modify it all you like
  */
 
-// Theme class prefixes 
-// ---------------------------------------------------
-// tp- primary theme
-// ts- secondary theme
-// tt- tertiary theme
-// tq- quarternary theme
+// Classname theme prefixes  (I was going to do pt but that kinda looks like padding top, ... other ideas welcome though)
+// ------------------------------------------------------------------------------------------------------------------------------
+// tp = Primary theme
+// ts = Secondary theme
+// tt = Tertiary theme
+// tq = Quarternary theme
+
+
+// Objects with theme helpers
+// -----------------------------------------------------------------------------
+// * Breadcrumbs
+// * Badges
+// * Block themes
+// * Page headers
+// * Buttons
+// * Pills
+// * Lozenge
+// *
 
 
 // Base Colours
@@ -25,12 +40,6 @@ $base-link-hover-color:         darken($base-link-color, 15%);
 
 
 $list-block-color:              #ccc;
-
-// Text emphasis colours
-$text-success:                  #468847;
-$text-warning:                  #c09853;
-$text-danger:                   #b94a48;
-$text-muted:                    #999;
 
 
 
@@ -55,8 +64,10 @@ hr {
   color:                $hr-colour;
 }
 
+
+
 // Common colours - Greys
-// -------------------------
+// --------------------------------------------------------
 
 $grey-darker:                   lighten(#000, 13.5%); // #222
 $grey-dark:                     lighten(#000, 20%);   // #333
@@ -66,11 +77,10 @@ $grey-lighter:                  lighten(#000, 93.5%); // #eee
 
 
 
-
 // Breadcrumbs
 // ----------------------------------------------------------------------------
 
-//primary theme
+
 $tp-breadcrumb-active-txt:        #555;
 $tp-breadcrumb-txt:               #666;
 $tp-breadcrumb-bg:                #f2f2f2;

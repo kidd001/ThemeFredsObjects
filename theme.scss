@@ -1,0 +1,351 @@
+
+/**
+ * Base Colours website and theme helpers for the objects 
+ * -----------------------------------------------------------------------------
+ */
+
+// Theme class prefixes 
+// ---------------------------------------------------
+// tp- primary theme
+// ts- secondary theme
+// tt- tertiary theme
+// tq- quarternary theme
+
+
+// Base Colours
+// -----------------------------------------------------------------------------
+
+$bg-color:                      #4D4D4D;
+$base-font-color:               #2E2F2B;
+$hr-colour:                     #e5e5e5;
+
+// Links
+$base-link-color:               #2F72BA;
+$base-link-hover-color:         darken($base-link-color, 15%);
+
+
+$list-block-color:              #ccc;
+
+// Text emphasis colours
+$text-success:                  #468847;
+$text-warning:                  #c09853;
+$text-danger:                   #b94a48;
+$text-muted:                    #999;
+
+
+
+// Base colours for your site
+// ----------------------------------------------------------------------------
+
+html, 
+body {
+    background-color:   $bg-color;
+    color:              $base-font-color;
+}
+
+a {
+    color:              $base-link-color;
+    &:hover {
+        color:          $base-link-hover-color;
+    }
+}
+
+hr {
+  background-color:     $hr-colour;
+  color:                $hr-colour;
+}
+
+// Common colours - Greys
+// -------------------------
+
+$grey-darker:                   lighten(#000, 13.5%); // #222
+$grey-dark:                     lighten(#000, 20%);   // #333
+$grey:                          lighten(#000, 33.5%); // #555
+$grey-light:                    lighten(#000, 60%);   // #999
+$grey-lighter:                  lighten(#000, 93.5%); // #eee
+
+
+
+
+// Breadcrumbs
+// ----------------------------------------------------------------------------
+
+//primary theme
+$tp-breadcrumb-active-txt:        #555;
+$tp-breadcrumb-txt:               #666;
+$tp-breadcrumb-bg:                #f2f2f2;
+
+
+.tp-breadrumbs {
+  background-color: $tp-breadcrumb-bg;
+  > li {
+    &+li:before {
+      color: $tp-breadcrumb-txt;
+    }
+  }
+  > .active {
+    color: $tp-breadcrumb-active-txt;
+  }
+}
+
+
+
+// Badges
+// ----------------------------------------------------------------------------
+
+//primary theme
+$tp-badge-txt:                    #fff;
+$tp-badge-bg:                     pink;
+$tp-badge-radius:                 10px;
+$tp-badge-active-txt:             #efefef;
+$tp-badge-active-bg:              blue;
+
+
+.tp-badge {
+    color: $tp-badge-txt;
+    background-color: $tp-badge-bg;
+    border-radius: $tp-badge-radius;
+}
+
+// Account for counters in navs
+a.tp-badge_active > .badge {
+    color: $tp-badge-active-txt;
+    background-color: $tp-badge-active-bg;
+}
+
+
+// Page header
+// ----------------------------------------------------------------------------
+
+$tp-page-header-txt:                #343434;
+$tp-page-header-span-txt:           slategray;
+
+.tp-page-header {
+    color:$tp-page-header-txt;
+    span {
+        color:$tp-page-header-span-txt;
+    }
+}
+
+
+
+// Theme blocks - success, warning and danger 
+// ----------------------------------------------------------------------------
+
+$success-bg-color:              #C5FFC6;
+$success-txt-color:             #468847;
+$success-border-color:          $success-txt-color;
+
+$warning-bg-color:              #FFFFD2;
+$warning-txt-color:             #DAB26D;
+$warning-border-color:          $warning-txt-color;
+
+$danger-bg-color:               #FFC9C7;
+$danger-txt-color:              #B94A48;
+$danger-border-color:           $danger-txt-color;
+
+
+.success-block {
+  @extend %border;
+  @include theme-block( $success-bg-color, $success-txt-color, $success-border-color );
+}
+
+.warning-block {
+  @extend %border;
+  @include theme-block( $warning-bg-color, $warning-txt-color, $warning-border-color );
+}
+
+.danger-block {
+  @extend %border;
+  @include theme-block( $danger-bg-color, $danger-txt-color, $danger-border-color );
+}
+
+
+// Theme blocks - Primary, Secondary, Tertiary, Quarternary 
+// ----------------------------------------------------------------------------
+
+//primary 
+$primary-bg-color:              #fff;
+$primary-txt-color:             $base-font-color; 
+$primary-border-color:          $primary-bg-color;
+
+//secondary 
+$secondary-bg-color:            #f2f2f2;
+$secondary-txt-color:           $base-font-color ; 
+$secondary-border-color:        #E6E6E6;
+
+//tertiary 
+$tertiary-bg-color:             #2E2F2B;
+$tertiary-txt-color:            #fff; 
+$tertiary-border-color:         $tertiary-bg-color;
+
+//quarternary 
+$quarternary-bg-color:          #4D4D4D;
+$quarternary-txt-color:         #fff; 
+$quarternary-border-color:      $quarternary-bg-color;
+
+
+.tp-block {
+  @extend %border;
+  @extend .radius--m;
+  @include theme-block( $primary-bg-color, $primary-txt-color, $primary-border-color );
+}
+
+.ts-block {
+  @extend %border;
+  @include theme-block( $secondary-bg-color, $secondary-txt-color, $secondary-border-color );
+}
+
+.tt-block {
+  @extend %border;
+  @include theme-block( $tertiary-bg-color, $tertiary-txt-color, $tertiary-border-color );
+}
+
+.tq-block {
+  @extend %border;
+    @include theme-block( $quarternary-bg-color, $quarternary-txt-color, $quarternary-border-color );
+}
+
+
+
+// Buttons
+// ----------------------------------------------------------------------------
+
+//default active states
+
+$active-btn-bg:                 #333;
+$active-btn-text:               #fff;
+
+// main theme blocks
+$primary-btn-bg:                #3CBE8A;
+$primary-btn-txt:               #fff;
+$primary-btn-border:            $primary-btn-bg;
+$primary-btn-hover-bg:          darken(#3CBE8A, 7%);
+$primary-btn-hover-txt:         #fff;
+
+$secondary-btn-bg:              #999;
+$secondary-btn-txt:             #fff;
+$secondary-btn-border:          $primary-btn-bg;
+$secondary-btn-hover-bg:        #777;
+$secondary-btn-hover-txt:       #fff;
+
+$tertiary-btn-bg:               #ddd;
+$tertiary-btn-txt:              #fff;
+$tertiary-btn-border:           #444;
+$tertiary-btn-hover-bg:         #ccc;
+$tertiary-btn-hover-txt:        #333;
+
+
+// theme blocks positive negative.. ??
+$positive-btn-bg:              #3977B1;
+$positive-btn-txt:             #fff;
+$positive-btn-border:          $primary-btn-bg;
+$positive-btn-hover-bg:        darken(#3977B1, 7%);
+$positive-btn-hover-txt:       $secondary-btn-txt;
+
+$negative-btn-bg:              #eb3930;
+$negative-btn-txt:             #fff;
+$negative-btn-border:          #444;
+$negative-btn-hover-bg:        #d8281f;
+$negative-btn-hover-txt:       $negative-btn-txt;
+
+.tp-btn {
+    
+    @include theme-block($primary-btn-bg, $primary-btn-txt, $primary-btn-border);  
+    &:hover {
+        background-color: $primary-btn-hover-bg;
+        color: $primary-btn-hover-txt;
+    }
+}
+
+.ts-btn {
+    @include theme-block($secondary-btn-bg, $secondary-btn-txt, $secondary-btn-border);
+    &:hover {
+        background-color: $secondary-btn-hover-bg;
+        color: $secondary-btn-hover-txt;
+    }
+}
+
+.tt-btn {
+    @include theme-block($tertiary-btn-bg, $tertiary-btn-txt, $tertiary-btn-border);
+    &:hover {
+        background-color: $tertiary-btn-hover-bg;
+        color: $tertiary-btn-hover-txt;
+    }
+}
+
+.btn-positive {
+    @include theme-block($positive-btn-bg, $positive-btn-txt, $positive-btn-border);
+    &:hover {
+        background-color: $positive-btn-hover-bg;
+        color: $positive-btn-hover-txt;
+    }
+}
+
+.btn-negative {
+    @include theme-block($negative-btn-bg, $negative-btn-txt, $negative-btn-border);
+    &:hover {
+        background-color: $negative-btn-hover-bg;
+        color: $negative-btn-hover-txt;
+    }
+}
+
+/**
+ * A common active state makes us look pro as, bro!
+ */
+
+.btn:active {
+    background-color: $active-btn-bg;
+    color: $active-btn-text;
+}
+
+
+// Pills
+// ----------------------------------------------------------------------------
+
+$tp-pill-bg-color:               #333;
+$tp-pill-text-color:             #fff;
+
+.pt-pill {
+  background-color: $pill-ui-color;
+  color: $pill-text-color;
+}
+
+
+// Lozenge
+// ----------------------------------------------------------------------------
+
+$tp-lozenge-radius:              .25em;
+
+.tp-lozenge {
+  border-radius: $tp-lozenge-radius;
+}
+
+
+// Headings 
+// ----------------------------------------------------------------------------
+
+$tp-sub-header:                    #999;
+$tp-heading:                       #2E2F2B;                  
+$tp-keyline-color:                 #999;
+
+.tp-heading {
+  color:$tp-heading;
+}
+
+    .heading--keyline { 
+      border-bottom-color:$tp-keyline-color;
+    }
+
+    .heading__subheading {
+      color:$tp-sub-header;
+    }
+
+
+// Arrows  
+// ----------------------------------------------------------------------------
+
+
+// Forms
+// ----------------------------------------------------------------------------
+

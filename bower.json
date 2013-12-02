@@ -1,0 +1,22 @@
+{
+  "name": "ThemeFredsObjects",
+  "version": "0.0.0",
+  "homepage": "https://github.com/springload/ThemeFredsObjects",
+  "authors": [
+    "laurabunea <laura.r.bunea@gmail.com>"
+  ],
+  "description": "Controls the themes for Fred's objects",
+  "keywords": [
+    "theme",
+    "freds",
+    "objects"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

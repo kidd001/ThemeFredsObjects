@@ -316,9 +316,9 @@ $negative-btn-hover-txt:       $negative-btn-txt;
 $tp-pill-bg-color:               #333;
 $tp-pill-text-color:             #fff;
 
-.pt-pill {
-  background-color: $pill-ui-color;
-  color: $pill-text-color;
+.tp-pill {
+  background-color: $tp-pill-bg-color;
+  color: $tp-pill-text-color;
 }
 
 
